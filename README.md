@@ -4,6 +4,9 @@
 
 ## Day 3
 
+### Downgrading
+I tried downgrading one of the nanos to run the `JP 4.2.1 2019/07/19` release of the OS, it's a few months old, but it seems to be the one that can be patched safely.
+
 ### Remote Desktop
 To do remote administration of the Jetson you are going to need some kind of *Remote Desktop*, VNC will need you to have an active desktop session in the Jetson, so you can't run it headless. For a headless remote desktop it is better to install RDP (Remote Desktop Protocol):
 
@@ -17,6 +20,8 @@ Forked the `ofxRealsense2` addon and updated the headers and library versions to
 #### Pointcloud acquisition test
 
 I pushed a test that lists the available cameras and acquires a pointcloud from the last camera available. You can get it here [IDArnhem/hslab-RealSense](https://github.com/IDArnhem/hslab-RealSense), you will need the add-on above to compile it. Eventually the same workflow can be used for multiple cameras.
+
+![pointcloud](assets/img/d435i-pointcloud-sketch.png)
 
 ## Day 2
 

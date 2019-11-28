@@ -2,6 +2,22 @@
 
 ## Journal
 
+## Day 3
+
+### Remote Desktop
+To do remote administration of the Jetson you are going to need some kind of *Remote Desktop*, VNC will need you to have an active desktop session in the Jetson, so you can't run it headless. For a headless remote desktop it is better to install RDP (Remote Desktop Protocol):
+
+`sudo apt-get install xrdp`
+
+### openFrameworks
+
+#### Add-on for RealSense
+Forked the `ofxRealsense2` addon and updated the headers and library versions to match the current distribution of Intel's SDK. This was necessary because the openFrameworks code I wrote refused to run because it detected a mismatch between the library in the system and the headers I used to compile it. The fork is on [IDArnhem's github](https://github.com/IDArnhem/ofxRealsense2).
+
+#### Pointcloud acquisition test
+
+I pushed a test that lists the available cameras and acquires a pointcloud from the last camera available. You can get it here [IDArnhem/hslab-RealSense](https://github.com/IDArnhem/hslab-RealSense), you will need the add-on above to compile it. Eventually the same workflow can be used for multiple cameras.
+
 ## Day 2
 
 #### Setting up the Jetsons

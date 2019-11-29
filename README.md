@@ -17,6 +17,39 @@ Overnight I recompiled the kernel using the `patchUbuntu.sh` script in the [Jets
 
 Both these screenshots were taken on a Jetson Nano, running this kernel `Linux nano004 4.9.140-tegra #1 SMP PREEMPT Thu Nov 28 19:40:18 CET 2019 aarch64 aarch64 aarch64 GNU/Linux`, and this version of the OS `Ubuntu 18.04.3 LTS`.
 
+### Patching openFrameworks
+
+I downloaded `openFrameworks v0.10.1`, the currently stable version, for `armv7l linux`, it requires a few adjustments to compile in the Jetson Nano. So I made the adjustments by hand and created a patch file that you can find in this repo.
+
+To apply the patch you need to be one directory up from the openFrameworks root and then type this:
+```
+patch -s -p0 < of-v0.10.1__jetson_nano.patch
+```
+
+Next, we need to recompile and build the kiss and tess2 libraries with these modified settings. You can download oF's apothecary tool to recompile the libraries:
+
+After applying the patch you need to build two binary dependencies by hand using openFraeworks `apothecary`:
+
+```
+git clone https://github.com/openframeworks/apothecary.git
+cd apothecary/apothecary
+./apothecary -t linux download kiss
+./apothecary -t linux prepare kiss
+./apothecary -t linux build kiss
+./apothecary -t linux download tess2
+./apothecary -t linux prepare tess2
+./apothecary -t linux build tess2
+```
+
+And then place those binaries in their proper locations in the openFrameworks directory structure:
+
+```
+$ cp apothecary/apothecary/build/kiss/lib/linux/libkiss.a of_v0.10.1_linuxarmv7l_release/libs/kiss/lib/linuxarmv7l/
+$ cp apothecary/apothecary/build/tess2_patched/build/libtess2.a of_v0.10.1_linuxarmv7l_release/libs/tess2/lib/linuxarmv7l/
+```
+
+Then you are ready to compile openFrameworks.
+
 ### Adding remoting capabilities to the Jetson
 
 I installed the following packages:
@@ -26,6 +59,7 @@ I installed the following packages:
 - installed VS Code
 - created a default `ssh` key without a password, which is located in the default location `~/.ssh/id_rsa` (to facilitate using git from the nano itself)
 - installed all the openFrameworks dependencies and video codecs for `gstreamer`.
+- compiled openFrameworks
 
 ## Day 3
 

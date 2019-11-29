@@ -5,6 +5,7 @@ Related repos:
 - our Ubuntu port of the NDI openframeworks addon [IDArnhem/ofxNDI](https://github.com/IDArnhem/ofxNDI)
 - pointcloud acquisition OF sketch [IDArnhem/hslab-RealSense](https://github.com/IDArnhem/hslab-RealSense)
 - our fork of the ofxRealsense2 openFrameworks addon [IDArnhem/ofxRealsense2](https://github.com/IDArnhem/ofxRealsense2) the stock version was outdated and does no longer work with latest SDK from Intel
+- testbed for NDI on openFrameworks (currently crashing) [IDArnhem/hslab-NDItest](https://github.com/IDArnhem/hslab-NDItest)
 
 ## Roadmap
 
@@ -51,6 +52,7 @@ Both these screenshots were taken on a Jetson Nano, running this kernel `Linux n
 I downloaded `openFrameworks v0.10.1`, the currently stable version, for `armv7l linux`, it requires a few adjustments to compile in the Jetson Nano. So I made the adjustments by hand and created a patch file that you can find in this repo.
 
 To apply the patch you need to be one directory up from the openFrameworks root and then type this:
+
 ```
 patch -s -p0 < of-v0.10.1__jetson_nano.patch
 ```

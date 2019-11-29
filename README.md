@@ -144,11 +144,12 @@ The D435i however will not, you will see this error in your console when you run
 
 With a bit of google mining I found these relevant threads:
 - [https://github.com/IntelRealSense/librealsense/issues/3165](https://github.com/IntelRealSense/librealsense/issues/3165)
-- 
 
 ##### Rebuilding the kernel
 
 I took the scripts in this repository [JetsonHacksNano/buildKernelAndModules](https://github.com/JetsonHacksNano/buildKernelAndModules) and followed the README step by step. I only customised one thing in the `getKernelSources.sh` scripts, I updated the variable `L4T_TARGET="32.2.1"` to be `L4T_TARGET="32.2.3"` because that's the version I am running. As of this writing the kernel is still compiling (it takes about 1h30 for the kernel and another 2h for the modules)
+
+**Update:** the patch and kernel recompile didn't work out, the Jetson boots but the graphics driver is borked and it crashes before it can start a gnome session. Messing with the version number as it turns out was a bad idea.
 
 ## Day 1
 

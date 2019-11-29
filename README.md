@@ -15,6 +15,8 @@ Overnight I recompiled the kernel using the `patchUbuntu.sh` script in the [Jets
 
 ![dual](assets/img/jetson_D435i_dual_with_perfmonitor.png)
 
+Both these screenshots were taken on a Jetson Nano, running this kernel `Linux nano004 4.9.140-tegra #1 SMP PREEMPT Thu Nov 28 19:40:18 CET 2019 aarch64 aarch64 aarch64 GNU/Linux`, and this version of the OS `Ubuntu 18.04.3 LTS`.
+
 ### Adding remoting capabilities to the Jetson
 
 I installed the following packages:

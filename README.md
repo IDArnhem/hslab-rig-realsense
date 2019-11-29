@@ -11,9 +11,9 @@ I ported an openFrameworks library to Linux, I managed to make it compile but it
 
 Overnight I recompiled the kernel using the `patchUbuntu.sh` script in the [JetsonHacksNano/installLibrealsense](https://github.com/JetsonHacksNano/installLibrealsense), starting from the **JP 4.2.2** version of the Nvidia Jetson Nano distribution. This updated the necessary kernel modules to be able to work with the RealSense D435i. I tested with 1, 2, 3 and 4 cameras to see what the Jetson was capable of. One camera worked pretty well, though not as smooth as on my laptop.
 
-![d435i-on-jetson](assets/imgs/jetson_with_D435i.png)
+![d435i-on-jetson](assets/img/jetson_with_D435i.png)
 
-![dual](assets/imgs/jetson_D435i_dual_with_perfmonitor.png)
+![dual](assets/img/jetson_D435i_dual_with_perfmonitor.png)
 
 ### Adding remoting capabilities to the Jetson
 

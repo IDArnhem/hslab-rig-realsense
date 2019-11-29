@@ -47,7 +47,7 @@ Both these screenshots were taken on a Jetson Nano, running this kernel `Linux n
 
 ### Patching openFrameworks
 
-I downloaded `openFrameworks v0.10.1`, the currently stable version, for `armv7l linux`, it requires a few adjustments to compile in the Jetson Nano. So I made the adjustments by hand and created a [patch file that you can find in this repo](https://github.com/IDArnhem/hslab-rig-realsense/blob/master/of-v0.10.1__jetson_nano.patch).
+I downloaded the current stable version of `openFrameworks v0.10.1` for `armv7l linux`, it requires a few adjustments to compile in the Jetson Nano. So I made the adjustments by hand and created a [patch file that you can find in this repo](https://github.com/IDArnhem/hslab-rig-realsense/blob/master/of-v0.10.1__jetson_nano.patch).
 
 To apply the patch you need to be one directory up from the openFrameworks root and then type this:
 
@@ -55,9 +55,9 @@ To apply the patch you need to be one directory up from the openFrameworks root 
 patch -s -p0 < of-v0.10.1__jetson_nano.patch
 ```
 
-Next, we need to recompile and build the kiss and tess2 libraries with these modified settings. You can download oF's apothecary tool to recompile the libraries:
+Next, we need to recompile and build the `kiss` and `tess2` libraries with these modified settings. You can download oF's apothecary tool to recompile the libraries:
 
-After applying the patch you need to build two binary dependencies by hand using openFraeworks `apothecary`:
+After applying the patch you need to build two binary dependencies by hand using openFrameworks `apothecary`:
 
 ```
 git clone https://github.com/openframeworks/apothecary.git

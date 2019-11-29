@@ -5,7 +5,7 @@
 ## Day 4
 
 ### Porting the ofxNDI library
-I ported an openFrameworks library to Linux, I managed to make it compile but it is not yet working due to the special way that the developers load the NDI dynamic library. This will require further work and possibly consulting the original developers about the best way to proceed with the port. I wil park this work until next week.
+I ported an openFrameworks library to Linux, I managed to make it compile but it is not yet working due to the special way that the developers load the NDI dynamic library. This will require further work and possibly consulting the original developers about the best way to proceed with the port. I wil park this work until next week. The HSLab version of the ofxNDI library can be found in this repo [IDArnhem/ofxNDI](https://github.com/IDArnhem/ofxNDI).
 
 ### Stabilizing software setup
 

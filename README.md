@@ -86,6 +86,7 @@ Similarly you can install a Remote Desktop client for your OS (this is broadly s
 ## Day 3 (28/11)
 
 ### Downgrading
+
 I tried downgrading one of the nanos to run the `JP 4.2.2 2019/08/26` [(download link)](https://developer.nvidia.com/jetson-nano-sd-card-image-r3221) release of the OS, it's a few months old, but it seems to be the one that can be patched safely. I tried other versions with disastrous results, so it is crucial that you start from this version.
 
 ### Remote Desktop
@@ -175,10 +176,10 @@ I took the scripts in this repository [JetsonHacksNano/buildKernelAndModules](ht
 
 ## Day 1 (25/11)
 
-- I got `librealsense2` to work on my Ubuntu laptop
-- I got [depthkit](https://www.depthkit.tv) to work with the RealSense on a Windows 10 machine (you need to install Media Extensions)
-- Got myself familiar with the openFrameworks APIs to code for it
-- Wrote a RealSense camera enumerator sketch in openFrameworks to explore multiple camera support, learned about the intel imaging pipeline of the RealSense API.
+- Got `librealsense2` to work on Ubuntu laptop
+- Got [depthkit](https://www.depthkit.tv) to work with the RealSense on a Windows 10 machine (you need to install Media Extensions)
+- Got myself familiar with the openFrameworks APIs to code for the RealSense
+- Wrote a RealSense camera enumerator sketch in openFrameworks to see how cameras are ID'ed for multiple camera support, learned about the Intel imaging pipeline of the RealSense API.
 
-Depthkit is pretty nifty and I think it would be good to have it in a lap computer being able to aquire data from the rig, as it can be a good tool for students to experiment with VR cinematography.
+Depthkit is pretty nifty and I think it would be good to have it in a lab computer being able to aquire data from the rig, as it can be a good tool for students to experiment with VR cinematography.
 

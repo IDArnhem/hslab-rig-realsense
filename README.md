@@ -67,6 +67,22 @@ I installed the following packages:
 - installed all the openFrameworks dependencies and video codecs for `gstreamer`.
 - compiled openFrameworks
 
+### Remote access
+
+You have multiple choices here. You can `ssh` into the Nanos, or you can use Remote Desktop to access a full desktop session. All nanos have `nano0XX` as hostname, where `XX` is their number in the rig.
+
+To ssh into one you just open up your terminal and type:
+```
+ssh nano@nano004.local
+```
+
+and that will get you into `nano004`.
+
+You can get the password from Doeke.
+
+Similarly you can install a Remote Desktop client for your OS (this is broadly supported in all platforms) and log into the nano of your choice by using it's node name (e.g. nano004.local), and the same user account for the desktop and same password. This will give you a desktop session.
+
+
 ## Day 3 (28/11)
 
 ### Downgrading

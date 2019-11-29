@@ -1,0 +1,101 @@
+diff -ruN of_v0.10.1_linuxarmv7l_release/addons/ofxPoco/addon_config.mk UNPATCHED___of_v0.10.1_linuxarmv7l_release/addons/ofxPoco/addon_config.mk
+--- of_v0.10.1_linuxarmv7l_release/addons/ofxPoco/addon_config.mk	2019-11-29 11:24:49.513079997 +0100
++++ UNPATCHED___of_v0.10.1_linuxarmv7l_release/addons/ofxPoco/addon_config.mk	2019-11-29 11:10:47.249272556 +0100
+@@ -65,23 +65,25 @@
+ 	ADDON_SOURCES_EXCLUDE = libs/poco/include/%
+ 
+ linux:
+-    ADDON_LDFLAGS = -lPocoNetSSL
+-	ADDON_LDFLAGS += -lPocoNet
+-	ADDON_LDFLAGS += -lPocoCrypto
+-	ADDON_LDFLAGS += -lPocoUtil
+-	ADDON_LDFLAGS += -lPocoXML
+-	ADDON_LDFLAGS += -lPocoFoundation
+-	ADDON_LDFLAGS += -lcrypto
++	ADDON_LIBS = libs/poco/lib/linux/libPocoNetSSL.a
++	ADDON_LIBS += libs/poco/lib/linux/libPocoNet.a
++	ADDON_LIBS += libs/poco/lib/linux/libPocoCrypto.a
++	ADDON_LIBS += libs/poco/lib/linux/libPocoUtil.a
++	ADDON_LIBS += libs/poco/lib/linux/libPocoJSON.a
++	ADDON_LIBS += libs/poco/lib/linux/libPocoXML.a
++	ADDON_LIBS += libs/poco/lib/linux/libPocoFoundation.a
++	ADDON_LDFLAGS = -lcrypto
+ 	ADDON_LDFLAGS += -lssl
+ 
+ linux64:
+-    ADDON_LDFLAGS = -lPocoNetSSL
+-	ADDON_LDFLAGS += -lPocoNet
+-	ADDON_LDFLAGS += -lPocoCrypto
+-	ADDON_LDFLAGS += -lPocoUtil
+-	ADDON_LDFLAGS += -lPocoXML
+-	ADDON_LDFLAGS += -lPocoFoundation
+-	ADDON_LDFLAGS += -lcrypto
++	ADDON_LIBS = libs/poco/lib/linux64/libPocoNetSSL.a
++	ADDON_LIBS += libs/poco/lib/linux64/libPocoNet.a
++	ADDON_LIBS += libs/poco/lib/linux64/libPocoCrypto.a
++	ADDON_LIBS += libs/poco/lib/linux64/libPocoUtil.a
++	ADDON_LIBS += libs/poco/lib/linux64/libPocoJSON.a
++	ADDON_LIBS += libs/poco/lib/linux64/libPocoXML.a
++	ADDON_LIBS += libs/poco/lib/linux64/libPocoFoundation.a
++	ADDON_LDFLAGS = -lcrypto
+ 	ADDON_LDFLAGS += -lssl
+ 
+ linuxarmv6l:
+Binary files of_v0.10.1_linuxarmv7l_release/libs/kiss/lib/linuxarmv7l/libkiss.a and UNPATCHED___of_v0.10.1_linuxarmv7l_release/libs/kiss/lib/linuxarmv7l/libkiss.a differ
+diff -ruN of_v0.10.1_linuxarmv7l_release/libs/openFrameworks/utils/ofConstants.h UNPATCHED___of_v0.10.1_linuxarmv7l_release/libs/openFrameworks/utils/ofConstants.h
+--- of_v0.10.1_linuxarmv7l_release/libs/openFrameworks/utils/ofConstants.h	2019-11-29 12:22:47.318435741 +0100
++++ UNPATCHED___of_v0.10.1_linuxarmv7l_release/libs/openFrameworks/utils/ofConstants.h	2019-11-29 11:10:47.165270365 +0100
+@@ -209,7 +209,7 @@
+ 		#define GL_GLEXT_PROTOTYPES
+ 		#include <GL/glew.h>
+ 		#include <GL/gl.h>
+-// @zilog		#include <GL/glext.h>
++		#include <GL/glext.h>
+ 	#endif
+ 
+ 	// for some reason, this isn't defined at compile time,
+diff -ruN of_v0.10.1_linuxarmv7l_release/libs/openFrameworksCompiled/project/linuxarmv7l/config.linuxarmv7l.default.mk UNPATCHED___of_v0.10.1_linuxarmv7l_release/libs/openFrameworksCompiled/project/linuxarmv7l/config.linuxarmv7l.default.mk
+--- of_v0.10.1_linuxarmv7l_release/libs/openFrameworksCompiled/project/linuxarmv7l/config.linuxarmv7l.default.mk	2019-11-29 12:08:57.303143434 +0100
++++ UNPATCHED___of_v0.10.1_linuxarmv7l_release/libs/openFrameworksCompiled/project/linuxarmv7l/config.linuxarmv7l.default.mk	2019-11-29 11:10:47.125269322 +0100
+@@ -38,10 +38,10 @@
+ #   Note: Leave a leading space when adding list items with the += operator
+ ################################################################################
+ 
+-#PLATFORM_CFLAGS += -march=armv7
+-#PLATFORM_CFLAGS += -mtune=cortex-a8
+-#PLATFORM_CFLAGS += -mfpu=neon
+-#PLATFORM_CFLAGS += -mfloat-abi=hard
++PLATFORM_CFLAGS += -march=armv7
++PLATFORM_CFLAGS += -mtune=cortex-a8
++PLATFORM_CFLAGS += -mfpu=neon
++PLATFORM_CFLAGS += -mfloat-abi=hard
+ PLATFORM_CFLAGS += -fPIC
+ PLATFORM_CFLAGS += -ftree-vectorize
+ PLATFORM_CFLAGS += -Wno-psabi
+@@ -66,9 +66,9 @@
+ # Note: Leave a leading space when adding list items with the += operator
+ ################################################################################
+ 
+-#PLATFORM_PKG_CONFIG_LIBRARIES += glesv1_cm
+-#PLATFORM_PKG_CONFIG_LIBRARIES += glesv2
+-#PLATFORM_PKG_CONFIG_LIBRARIES += egl
++PLATFORM_PKG_CONFIG_LIBRARIES += glesv1_cm
++PLATFORM_PKG_CONFIG_LIBRARIES += glesv2
++PLATFORM_PKG_CONFIG_LIBRARIES += egl
+ 
+ 
+ ################################################################################
+diff -ruN of_v0.10.1_linuxarmv7l_release/libs/openFrameworksCompiled/project/makefileCommon/config.shared.mk UNPATCHED___of_v0.10.1_linuxarmv7l_release/libs/openFrameworksCompiled/project/makefileCommon/config.shared.mk
+--- of_v0.10.1_linuxarmv7l_release/libs/openFrameworksCompiled/project/makefileCommon/config.shared.mk	2019-11-29 12:08:02.113860642 +0100
++++ UNPATCHED___of_v0.10.1_linuxarmv7l_release/libs/openFrameworksCompiled/project/makefileCommon/config.shared.mk	2019-11-29 11:10:47.125269322 +0100
+@@ -76,8 +76,7 @@
+ 			PLATFORM_LIB_SUBPATH=linux64
+ 		else ifeq ($(PLATFORM_ARCH),armv6l)
+ 			PLATFORM_LIB_SUBPATH=linuxarmv6l
+-		else ifeq ($(PLATFORM_ARCH),aarch64)
+-		#else ifeq ($(PLATFORM_ARCH),armv7l)
++		else ifeq ($(PLATFORM_ARCH),armv7l)
+ 			PLATFORM_LIB_SUBPATH=linuxarmv7l
+ 		else ifeq ($(PLATFORM_ARCH),i386)
+ 			PLATFORM_LIB_SUBPATH=linux
+Binary files of_v0.10.1_linuxarmv7l_release/libs/tess2/lib/linuxarmv7l/libtess2.a and UNPATCHED___of_v0.10.1_linuxarmv7l_release/libs/tess2/lib/linuxarmv7l/libtess2.a differ

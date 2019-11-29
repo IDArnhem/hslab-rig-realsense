@@ -28,8 +28,6 @@ As per 29 NOV we think that this is what's left to do to have a nicely working r
 - automatic calibration (qr code for example)
 - making tracking sensors vr
 
-
-
 ## Journal
 
 ## Day 4 (29/11)
@@ -49,7 +47,7 @@ Both these screenshots were taken on a Jetson Nano, running this kernel `Linux n
 
 ### Patching openFrameworks
 
-I downloaded `openFrameworks v0.10.1`, the currently stable version, for `armv7l linux`, it requires a few adjustments to compile in the Jetson Nano. So I made the adjustments by hand and created a patch file that you can find in this repo.
+I downloaded `openFrameworks v0.10.1`, the currently stable version, for `armv7l linux`, it requires a few adjustments to compile in the Jetson Nano. So I made the adjustments by hand and created a [patch file that you can find in this repo](https://github.com/IDArnhem/hslab-rig-realsense/blob/master/of-v0.10.1__jetson_nano.patch).
 
 To apply the patch you need to be one directory up from the openFrameworks root and then type this:
 

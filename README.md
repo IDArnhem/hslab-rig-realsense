@@ -6,6 +6,29 @@ Related repos:
 - pointcloud acquisition OF sketch [IDArnhem/hslab-RealSense](https://github.com/IDArnhem/hslab-RealSense)
 - our fork of the ofxRealsense2 openFrameworks addon [IDArnhem/ofxRealsense2](https://github.com/IDArnhem/ofxRealsense2) the stock version was outdated and does no longer work with latest SDK from Intel
 
+## Roadmap
+
+As per 29 NOV we think that this is what's left to do to have a nicely working rig that is usable for our students:
+
+- NDI streaming of video and depth buffers from the cameras
+- a service that allows you to stream point cloud data from any of the cameras
+- dashboard page with status of all the devices:
+    - the device status
+    - the streams it publishes (with names)
+    - any other services available (OSC?)
+    - a simple interface to keystone the video feed to the beamers
+    - an NDI receiver on the Jetson nano
+- projection mapping
+- tracking camera
+- microphones
+- examples / wiki
+- unity receiver for pointcloud
+- iterative Closest point
+- automatic calibration (qr code for example)
+- making tracking sensors vr
+
+
+
 ## Journal
 
 ## Day 4 (29/11)

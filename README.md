@@ -2,7 +2,7 @@
 
 ## Journal
 
-## Day 4
+## Day 4 (29/11)
 
 ### Porting the ofxNDI library
 I ported an openFrameworks library to Linux, I managed to make it compile but it is not yet working due to the special way that the developers load the NDI dynamic library. This will require further work and possibly consulting the original developers about the best way to proceed with the port. I wil park this work until next week. The HSLab version of the ofxNDI library can be found in this repo [IDArnhem/ofxNDI](https://github.com/IDArnhem/ofxNDI).
@@ -61,7 +61,7 @@ I installed the following packages:
 - installed all the openFrameworks dependencies and video codecs for `gstreamer`.
 - compiled openFrameworks
 
-## Day 3
+## Day 3 (28/11)
 
 ### Downgrading
 I tried downgrading one of the nanos to run the `JP 4.2.2 2019/08/26` [(download link)](https://developer.nvidia.com/jetson-nano-sd-card-image-r3221) release of the OS, it's a few months old, but it seems to be the one that can be patched safely. I tried other versions with disastrous results, so it is crucial that you start from this version.
@@ -88,7 +88,7 @@ Doeke and I made a simple test using [OBS Studio](https://obsproject.com) with t
 
 Another finding from this experiment is that **a single NDI stream at 60fps HD was taking up about 70Mbps of ethernet bandwith**. This means that a 100Mbps switch would struggle to take the peaks of 4 or 5 streams. Therefore a 1Gbps switch will be needed.
 
-## Day 2
+## Day 2 (26/11)
 
 #### Setting up the Jetsons
 - Downloaded a NVIDIA's stock Jetson distro from the official site: https://www.developer.nvidia.com/embedded/downloads
@@ -151,7 +151,12 @@ I took the scripts in this repository [JetsonHacksNano/buildKernelAndModules](ht
 
 **Update:** the patch and kernel recompile didn't work out, the Jetson boots but the graphics driver is borked and it crashes before it can start a gnome session. Messing with the version number as it turns out was a bad idea.
 
-## Day 1
+## Day 1 (25/11)
 
 - I got `librealsense2` to work on my Ubuntu laptop
 - I got [depthkit](https://www.depthkit.tv) to work with the RealSense on a Windows 10 machine (you need to install Media Extensions)
+- Got myself familiar with the openFrameworks APIs to code for it
+- Wrote a RealSense camera enumerator sketch in openFrameworks to explore multiple camera support, learned about the intel imaging pipeline of the RealSense API.
+
+Depthkit is pretty nifty and I think it would be good to have it in a lap computer being able to aquire data from the rig, as it can be a good tool for students to experiment with VR cinematography.
+

@@ -2,10 +2,33 @@
 
 ## Journal
 
+## Day 4
+
+### Porting the ofxNDI library
+I ported an openFrameworks library to Linux, I managed to make it compile but it is not yet working due to the special way that the developers load the NDI dynamic library. This will require further work and possibly consulting the original developers about the best way to proceed with the port. I wil park this work until next week.
+
+### Stabilizing software setup
+
+Overnight I recompiled the kernel using the `patchUbuntu.sh` script in the [JetsonHacksNano/installLibrealsense](https://github.com/JetsonHacksNano/installLibrealsense), starting from the **JP 4.2.2** version of the Nvidia Jetson Nano distribution. This updated the necessary kernel modules to be able to work with the RealSense D435i. I tested with 1, 2, 3 and 4 cameras to see what the Jetson was capable of. One camera worked pretty well, though not as smooth as on my laptop.
+
+![d435i-on-jetson](assets/imgs/jetson_with_D435i.png)
+
+![dual](assets/imgs/jetson_D435i_dual_with_perfmonitor.png)
+
+### Adding remoting capabilities to the Jetson
+
+I installed the following packages:
+- `iftop`, `nload`, `tcptrack` for network load monitoring
+- installed `xrdp` for Remote Desktop support on the Jetson (better than VNC as VNC requires a user session and can't be used headless)
+- installed `mosquitto` for mqtt monitoring (to do a web-based dashboard)
+- installed VS Code
+- created a default `ssh` key without a password, which is located in the default location `~/.ssh/id_rsa` (to facilitate using git from the nano itself)
+- installed all the openFrameworks dependencies and video codecs for `gstreamer`.
+
 ## Day 3
 
 ### Downgrading
-I tried downgrading one of the nanos to run the ` JP 4.2.2 2019/08/26` release of the OS, it's a few months old, but it seems to be the one that can be patched safely.
+I tried downgrading one of the nanos to run the `JP 4.2.2 2019/08/26` [(download link)](https://developer.nvidia.com/jetson-nano-sd-card-image-r3221) release of the OS, it's a few months old, but it seems to be the one that can be patched safely. I tried other versions with disastrous results, so it is crucial that you start from this version.
 
 ### Remote Desktop
 To do remote administration of the Jetson you are going to need some kind of *Remote Desktop*, VNC will need you to have an active desktop session in the Jetson, so you can't run it headless. For a headless remote desktop it is better to install RDP (Remote Desktop Protocol):
@@ -22,6 +45,12 @@ Forked the `ofxRealsense2` addon and updated the headers and library versions to
 I pushed a test that lists the available cameras and acquires a pointcloud from the last camera available. You can get it here [IDArnhem/hslab-RealSense](https://github.com/IDArnhem/hslab-RealSense), you will need the add-on above to compile it. Eventually the same workflow can be used for multiple cameras.
 
 ![pointcloud](assets/img/d435i-pointcloud-sketch.png)
+
+#### NDI streaming test with OBS Studio
+
+Doeke and I made a simple test using [OBS Studio](https://obsproject.com) with the [NDI plugin](https://github.com/Palakis/obs-ndi/releases/tag/4.7.1). We plugged our computers to the classroom ethernet and setup a stream with my computer as an NDI source and Doeke's as an NDI sink. OBS made the process supersimple and the video quality was quite impressive, there was only a few milliseconds lag for full frame HD video. We determined that this was the best way to go to acquire the buffers from the depth cameras.
+
+Another finding from this experiment is that **a single NDI stream at 60fps HD was taking up about 70Mbps of ethernet bandwith**. This means that a 100Mbps switch would struggle to take the peaks of 4 or 5 streams. Therefore a 1Gbps switch will be needed.
 
 ## Day 2
 

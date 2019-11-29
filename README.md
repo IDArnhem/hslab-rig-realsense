@@ -82,6 +82,11 @@ You can get the password from Doeke.
 
 Similarly you can install a Remote Desktop client for your OS (this is broadly supported in all platforms) and log into the nano of your choice by using it's node name (e.g. nano004.local), and the same user account for the desktop and same password. This will give you a desktop session.
 
+### Power setup for rig
+
+This is mostly a note for Doeke, remember that you have these PoE injectors that can step voltage to a specific rating. [Here's one example](https://www.netcamshop.nl/foscam-poe5912g-poe-splitter-power-output-5v-9v-12v-ieee-802-3af/pid=58137), remember also to get 1Gbps-capable ones.
+
+Together with a 1Gbps PoE switch [like this one](https://www.newegg.com/global/nl-en/p/N82E16833122817), and you can do away with the dumb transformer of the Jetson Nano.
 
 ## Day 3 (28/11)
 

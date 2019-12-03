@@ -43,6 +43,22 @@ Got the NewTek [NDI SDK for embedded devices](http://new.tk/NDISDKE) and tested 
 
 Also got to build a async UDP test [IDArnhem/hslab-AsioUdpTest](https://github.com/IDArnhem/hslab-AsioUdpTest) which will be the basis for the pointcloud transfer protocol. Very primitive at the moment.
 
+We can advertise the pointcloud streaming service using Avahi on linux by creating a file `/etc/avahi/services/hslab-pointcloud.service` here, with these contents:
+
+```
+<?xml version="1.0" standalone='no'?>
+<!DOCTYPE service-group SYSTEM "avahi-service.dtd">
+<service-group>
+  <name replace-wildcards="yes">HSLAB pointcloud %h</name>
+  <service>
+    <type>_pcloud._tcp</type>
+    <port>9100</port>
+  </service>
+</service-group>
+```
+
+This will advertise a Zeroconf service on port `9100` with the name `HSLAB pointcloud nano003.local`. OSX will probably recognize this as a Bonjour service.
+
 ## Day 5 (2/12)
 
 Compiled and tested `ofxNDI` on my Ubuntu laptop, getting an NDI stream to work for the first time from openFrameworks.

@@ -6,6 +6,7 @@ Related repos:
 - pointcloud acquisition OF sketch [IDArnhem/hslab-RealSense](https://github.com/IDArnhem/hslab-RealSense)
 - our fork of the ofxRealsense2 openFrameworks addon [IDArnhem/ofxRealsense2](https://github.com/IDArnhem/ofxRealsense2) the stock version was outdated and does no longer work with latest SDK from Intel, this one works fine
 - testbed for NDI on openFrameworks (currently crashing) [IDArnhem/hslab-NDItest](https://github.com/IDArnhem/hslab-NDItest)
+- testbed for async UDP protocol [IDArnhem/hslab-AsioUdpTest](https://github.com/IDArnhem/hslab-AsioUdpTest)
 
 ## Roadmap
 
@@ -39,6 +40,8 @@ wget -O InstallNDISDK_v4_Linux_Embedded.tar.gz http://new.tk/NDISDKE
 Got the NewTek [NDI SDK for embedded devices](http://new.tk/NDISDKE) and tested the `aarch64` binaries on the Jetson Nano. Seems to run fine.
 
 ![](assets/img/NDISDK_aarch64_on_jetson.png)
+
+Also got to build a async UDP test [IDArnhem/hslab-AsioUdpTest](https://github.com/IDArnhem/hslab-AsioUdpTest) which will be the basis for the pointcloud transfer protocol. Very primitive at the moment.
 
 ## Day 5 (2/12)
 

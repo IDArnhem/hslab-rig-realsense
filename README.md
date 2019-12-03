@@ -44,7 +44,7 @@ Got the NewTek [NDI SDK for embedded devices](http://new.tk/NDISDKE) and tested 
 
 Compiled and tested `ofxNDI` on my Ubuntu laptop, getting an NDI stream to work for the first time from openFrameworks.
 
-Created a pull request on github, to contribute back upstream. Author responded by integrating the changes.
+Created a pull request on github, to contribute back upstream. Author responded by [integrating the changes](https://github.com/leadedge/ofxNDI/commits/testing).
 
 ## Day 4 (29/11)
 

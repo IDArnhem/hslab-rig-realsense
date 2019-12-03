@@ -30,7 +30,7 @@ As per 29 NOV we think that this is what's left to do to have a nicely working r
 
 ## Journal
 
-## Day 5 (3/12)
+## Day 6 (3/12)
 
 ```
 wget -O InstallNDISDK_v4_Linux_Embedded.tar.gz http://new.tk/NDISDKE
@@ -40,7 +40,7 @@ Got the NewTek [NDI SDK for embedded devices](http://new.tk/NDISDKE) and tested 
 
 ![](assets/img/NDISDK_aarch64_on_jetson.png)
 
-## Day 4 (2/12)
+## Day 5 (2/12)
 
 Compiled and tested `ofxNDI` on my Ubuntu laptop, getting an NDI stream to work for the first time from openFrameworks.
 

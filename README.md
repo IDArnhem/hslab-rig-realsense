@@ -33,7 +33,7 @@ As per 29 NOV we think that this is what's left to do to have a nicely working r
 ## Day 5 (3/12)
 
 ```
-wget http://new.tk/NDISDKE
+wget -O InstallNDISDK_v4_Linux_Embedded.tar.gz http://new.tk/NDISDKE
 ```
 
 Got the NewTek [NDI SDK for embedded devices](http://new.tk/NDISDKE) and tested the `aarch64` binaries on the Jetson Nano. Seems to run fine.

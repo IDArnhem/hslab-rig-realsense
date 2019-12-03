@@ -30,6 +30,22 @@ As per 29 NOV we think that this is what's left to do to have a nicely working r
 
 ## Journal
 
+## Day 5 (3/12)
+
+```
+wget http://new.tk/NDISDKE
+```
+
+Got the NewTek [NDI SDK for embedded devices](http://new.tk/NDISDKE) and tested the `aarch64` binaries on the Jetson Nano. Seems to run fine.
+
+![](assets/img/NDISDK_aarch64_on_jetson.png)
+
+## Day 4 (2/12)
+
+Compiled and tested `ofxNDI` on my Ubuntu laptop, getting an NDI stream to work for the first time from openFrameworks.
+
+Created a pull request on github, to contribute back upstream. Author responded by integrating the changes.
+
 ## Day 4 (29/11)
 
 ### Porting the ofxNDI library
@@ -155,17 +171,17 @@ Another finding from this experiment is that **a single NDI stream at 60fps HD w
 
 #### Setting up RealSense on Jetson
 
-[The stock RealSense linux install instructions](https://github.com/IntelRealSense/librealsense/blob/master/doc/distribution_linux.md) will not work on the NVIDIA Jetson, some of the commands will complete successfully, others will not. The Jetson, like the Raspberry Pi needs `arm` builds for all binaries, so you need to build from source or find binaries.
+[The stock RealSense linux install instructions](https://github.com/IntelRealSense/librealsense/blob/master/doc/distribution_linux.md) will not work on the NVIDIA Jetson, some of the commands will complete successfully, others will not. The Jetson, like the Raspberry Pi needs `arm` builds for all binaries, so you need to build from source or find `arm` binaries.
 
 [This article](https://www.jetsonhacks.com/2019/05/16/jetson-nano-realsense-depth-camera/) explains the painful process you are about to embark on.
 
-I downloaded the contents of this repo [JetsonHacksNano/installLibrealsense](https://github.com/JetsonHacksNano/installLibrealsense) and executed `./installLibrealsense.sh` but it ran out of RAM half-way through compilation. So it is recommended that you first create a swap file, so that this happen to you. To create the swap file I used a script that you can get an run like this:
+I downloaded the contents of this repo [JetsonHacksNano/installLibrealsense](https://github.com/JetsonHacksNano/installLibrealsense) and executed `./installLibrealsense.sh` but it ran out of RAM half-way through compilation. So it is recommended that you first create a RAM swap file. To create the swap file, I used a script that you can get and run like this:
 
 ```
 curl -s https://raw.githubusercontent.com/JetsonHacksNano/installSwapfile/master/installSwapfile.sh | bash
 ```
 
-This script will ask a few questions but if you press enter in each of them it will run with reasonable defaults and create a 8Gb swap file that should be enough to compile `librealsense2`. Now you are ready to go back to the directory where your `./installLibrealsense.sh` script is and run it. This will take about 40m, so it's a good time to go and grab a coffee.
+This script will ask a few questions but if you press enter in each of them, it will run with reasonable defaults and create a 8Gb swap file that should be enough to compile `librealsense2`. Now you are ready to go back to the directory where your `./installLibrealsense.sh` script is and run it. This will take about 40m, so it's a good time to go and grab a coffee.
 
 #### NDI
 

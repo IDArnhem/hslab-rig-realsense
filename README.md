@@ -31,6 +31,20 @@ As per 29 NOV we think that this is what's left to do to have a nicely working r
 
 ## Journal
 
+## 14.2.2020 (2h30)
+
+- `hslab-RealsenseNDI` builds and runs on `nano003` since today, seems to create the NDI streams just fine and to open the camera stream.
+- Tried the version with the ImGui as well on the nano.
+
+- TODO:
+  - [] make GUI actually have an effect
+  - [] enable/disable render streams on window
+  - [] enable/disable NDI feed per stream
+
+## 13.2.2020
+- met Ibo to discuss involvement
+- got back on track building for nano (20m)
+
 ## Day 6 (3/12)
 
 ```

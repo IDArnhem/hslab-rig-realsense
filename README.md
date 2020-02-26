@@ -31,6 +31,12 @@ As per 29 NOV we think that this is what's left to do to have a nicely working r
 
 ## Journal
 
+## 27.2.2020 (3h)
+
+- Worked with Ibo over videolink today, nice
+- Compiled oF on his nano (the-rig), and found some problems
+- worked on getting the patch file and patching instructions right so that someone else can reproduce
+
 ## 14.2.2020 (1h30)
 
 - GUI is now implemented

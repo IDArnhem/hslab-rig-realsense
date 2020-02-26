@@ -104,9 +104,7 @@ Both these screenshots were taken on a Jetson Nano, running this kernel `Linux n
 
 I downloaded the current stable version of `openFrameworks v0.10.1` for `armv7l linux`, it requires a few adjustments to compile in the Jetson Nano. So I made the adjustments by hand and created a [patch file that you can find in this repo](https://github.com/IDArnhem/hslab-rig-realsense/blob/master/of-v0.10.1__jetson_nano.patch).
 
-I suggest you copy the patch file to the root of your openFrameworks install, so in the directory named `of_v0.10.0_linuxarmv7l_release`.
-
-To apply the patch you need to be in the root directory of the openFrameworks original you just downloaded and then type this:
+I suggest you copy the patch file to the root of your openFrameworks install, so in the directory named `of_v0.10.0_linuxarmv7l_release`. To apply the patch you need to be in the root directory of the openFrameworks original you just downloaded. All together your commands will be something like this:
 
 ```
 $ cd of_v0.10.0_linuxarmv7l_release

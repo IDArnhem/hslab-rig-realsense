@@ -31,6 +31,11 @@ As per 29 NOV we think that this is what's left to do to have a nicely working r
 
 ## Journal
 
+## 04.03.2020 (1h30)
+- Worked with Ibo on getting hslab-realsenseNDI compiled on his nano. Finally successful compilation!
+- Updated this documentation.
+- Updated ths repo with nano-binaries for NDI libraries.
+
 ## 27.2.2020 (3h)
 
 - Worked with Ibo over videolink today, nice

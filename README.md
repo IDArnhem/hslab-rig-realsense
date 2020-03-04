@@ -35,6 +35,7 @@ As per 29 NOV we think that this is what's left to do to have a nicely working r
 - Worked with Ibo on getting hslab-realsenseNDI compiled on his nano. Finally successful compilation!
 - Updated this documentation.
 - Updated ths repo with nano-binaries for NDI libraries.
+- Added `sanitycheck.sh` script to run in the nanos, to make sure libraries aren't missing
 
 ## 27.2.2020 (3h)
 

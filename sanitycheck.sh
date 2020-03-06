@@ -19,6 +19,7 @@ for fname in $CHECK; do
     if [ -f "$dir/$fname" ]; then
     	#present "$fname is there!"
 	found=true
+	break
     else
 	#missing "$fname is not there!"
 	found=false

@@ -9,7 +9,7 @@ present() {
 	echo "\e[32m $1 is ok\e[39m"
 }
 
-LIBDIRS="/usr/local/lib /usr/lib /usr/lib/x86_64-linux-gnu"
+LIBDIRS="/usr/local/lib /usr/lib /usr/lib/x86_64-linux-gnu /usr/lib/aarch64-linux-gnu"
 CHECK="librealsense2.so libNDI.so"
 for fname in $CHECK; do
   found=false

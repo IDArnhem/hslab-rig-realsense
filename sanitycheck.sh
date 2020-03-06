@@ -10,7 +10,7 @@ present() {
 }
 
 LIBDIRS="/usr/local/lib /usr/lib /usr/lib/x86_64-linux-gnu /usr/lib/aarch64-linux-gnu"
-CHECK="librealsense2.so libNDI.so"
+CHECK="librealsense2.so libndi.so"
 for fname in $CHECK; do
   found=false
   #echo "Checking at $dir..."

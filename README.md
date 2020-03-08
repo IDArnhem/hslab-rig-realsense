@@ -31,6 +31,17 @@ As per 29 NOV we think that this is what's left to do to have a nicely working r
 
 ## Journal
 
+## 08.03.2020 (???)
+- Worked on compression, tried different algorithms
+- Did some statistics on data rates, compression, camera modes, etc.
+- At the moment it takes about 250ms to process one frame
+- wrote some [documentation that can be useful to write the Unity client](stats.md)
+
+## 07.03.2020 (3h30)
+- Getting pointcloud from camera
+- Transforming it to an intermediate datastructure so that it can be easily compressed and sent over the network
+- Reconstruct datastructure into a 3D mesh for screen presentation
+
 ## 04.03.2020 (1h30)
 - Worked with Ibo on getting hslab-realsenseNDI compiled on his nano. Finally successful compilation!
 - Updated this documentation.

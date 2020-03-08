@@ -25,7 +25,7 @@ It has three buffers:
 
 ### Data throughput
 
-![720](assets/img/1280x720@30.png)
+![720](assets/img/1280x780@30.png)
 
 At HD capture resolution (1280x720) the point cloud contains:
 - 921600 points per frame

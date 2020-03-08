@@ -69,7 +69,7 @@ Mesh reconstruction takes about 25ms on average, peaks at 32ms more or less.
 
 At the moment, mesh reconstruction looks like this, the `cloud` data structure is our abstract representation. The `mesh` object is an openFrameworks `ofMesh` instance. A similar reconstruction will have to be made in Unity.
 
-```
+```cpp
 void ofApp::buildMesh(ofxHslabPointcloud &cloud) {
     mesh.clear();
     if(cloud.pcdata.count !=0 ){

@@ -28,33 +28,27 @@ It has three buffers:
 ![720](assets/img/1280x780@30.png)
 
 At HD capture resolution (1280x720) the point cloud contains:
-- 921600 points per frame
-- 2764800 bytes for color buffer
-- 11059200 bytes for vertex buffer
-- 7372800 bytes for texture buffer
-- 21196800 bytes for pointcloud
+| points | color bytes | vertex bytes | texture bytes | total bytes |
+| ---- | ---- | ---- | ---- | ---- |
+| 921600 | 2764800 | 11059200 | 7372800 | 21196800 |
 
 ![480](assets/img/640x480@30.png)
 
 At 640x480 capture resolution:
-- 307200 points per frame
-- 921600 bytes for color buffer
-- 3686400 bytes for vertex buffer
-- 2457600 bytes for texture buffer
-- 7065600 bytes for pointcloud
+| points | color bytes | vertex bytes | texture bytes | total bytes |
+| ---- | ---- | ---- | ---- | ---- |
+| 307200 | 921600 | 3686400 | 2457600 | 7065600 |
 
 ![380](assets/img/640x380@30.png)
 
 At 640x360 resolution:
-- 230400 points in pointcloud
-- 691200 bytes color buffer
-- 2764800 bytes vertex buffer
-- 1843200 bytes texture buffer
-- 5299200 bytes for pointcloud
+| points | color bytes | vertex bytes | texture bytes | total bytes |
+| ---- | ---- | ---- | ---- | ---- |
+| 230400 | 691200 | 2764800 | 1843200 | 5299200 |
 
 #### Compression
 
-To keep datarates over the network to aminimum, all frame data is compressed before being pumped through the UDP protocol. To compress it I used the Snappy library from Google. It's focused on speed and (de)compression and it gets fairly good compression ratios. It brings sizes down to about 7MB per frame from 14Mb, at a consistent ratio of 0.56.
+To keep datarates over the network to aminimum, all frame data is compressed before being pumped through the UDP protocol. To compress it I used the Snappy library from Google. It's focused on speed and (de)compression and it gets fairly good compression ratios (0.56 aprox).
 
 ### Frame cooking times
 

@@ -9,8 +9,8 @@ present() {
 	echo "\e[32m $1 is ok\e[39m"
 }
 
-LIBDIRS="/usr/local/lib /usr/lib /usr/lib/x86_64-linux-gnu"
-CHECK="librealsense2.so libNDI.so"
+LIBDIRS="/usr/local/lib /usr/lib/x86_64-linux-gnu /usr/lib/aarch64-linux-gnu /usr/lib"
+CHECK="librealsense2.so libndi.so"
 for fname in $CHECK; do
   found=false
   #echo "Checking at $dir..."
@@ -19,6 +19,7 @@ for fname in $CHECK; do
     if [ -f "$dir/$fname" ]; then
     	#present "$fname is there!"
 	found=true
+	break
     else
 	#missing "$fname is not there!"
 	found=false

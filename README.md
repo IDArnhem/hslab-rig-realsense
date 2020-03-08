@@ -31,7 +31,7 @@ As per 29 NOV we think that this is what's left to do to have a nicely working r
 
 ## Journal
 
-## 08.03.2020 (???)
+## 08.03.2020 (3h)
 - Worked on compression, tried different algorithms
 - Did some statistics on data rates, compression, camera modes, etc.
 - At the moment it takes about 250ms to process one frame

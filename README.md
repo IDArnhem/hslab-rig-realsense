@@ -37,6 +37,8 @@ As per 29 NOV we think that this is what's left to do to have a nicely working r
 - At the moment it takes about 250ms to process one frame
 - wrote some [documentation that can be useful to write the Unity client](stats.md)
 
+Note on supported resolutions, this is what the camera lists: 320x180, 320x240, 424x240, 640x360, 640x480, 960x540, 1280x720, 1920x1080 and it supports these modes at 6, 15, 30 and 60 fps. Not sure how framerates and resolutions match up.
+
 ## 07.03.2020 (3h30)
 - Getting pointcloud from camera
 - Transforming it to an intermediate datastructure so that it can be easily compressed and sent over the network

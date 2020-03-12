@@ -1,5 +1,9 @@
 # Anrhem's DATA HSLab rig
 
+If you just want to deploy this stuff, you can start with the [Deployment Guide](deploy.md).
+
+If you are a devloper and need to understand the software for the rig, keep reading.
+
 Related repos:
 - this repo with the journal, documentation and patches [IDArnhem/hslab-rig-realsense](https://github.com/IDArnhem/hslab-rig-realsense)
 - our Ubuntu port of the NDI openframeworks addon [IDArnhem/ofxNDI](https://github.com/IDArnhem/ofxNDI)
@@ -30,6 +34,10 @@ As per 29 NOV we think that this is what's left to do to have a nicely working r
 - making tracking sensors vr
 
 ## Journal
+
+## 12.03.2020 (1h)
+- helped Ibo debug the problems he encountered to get NDI feed
+- began work on a [Deployment Guide](deploy.md)
 
 ## 08.03.2020 (3h)
 - Worked on compression, tried different algorithms

@@ -1,6 +1,6 @@
 # Deployment guide
 
-Follow this checklist to get the righ hardware ready:
+Follow this checklist to get the rig hardware ready:
 
 - [ ] Make sure that all your nanos are properly powered with supplies capable of delivering **3A** of current.
 - [ ] Run `sanitycheck.sh` in all your nanos to check that all necessary libraries are installed.
